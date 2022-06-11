@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 colored = "2"
 eval = "0.4.3"
+tabled = "0.7.0"
+rand = "0.8.4"

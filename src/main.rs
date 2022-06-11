@@ -9,10 +9,13 @@ mod utils;
 mod vars;
 mod vectors;
 mod functions;
+mod pointerz;
+mod structz;
+mod enums;
 use colored::Colorize;
 use eval::{eval};
 // create a list of programs on the sandbox
-static NAMES: [&str; 10] = [
+static NAMES: [&str; 13] = [
     "print",
     "vars",
     "types",
@@ -22,7 +25,10 @@ static NAMES: [&str; 10] = [
     "vectors",
     "conditions",
     "loops",
-    "functions"
+    "functions",
+    "pointers",
+    "structs",
+    "enums"
 ];
 fn main() {
     main_menu();
@@ -89,7 +95,10 @@ fn init_programs() -> i32 {
         vectors::run,
         conditions::run,
         loops::run,
-        functions::run
+        functions::run,
+        pointerz::run,
+        structz::run,
+        enums::run
     ];
     return read_user_input(programs);
 }

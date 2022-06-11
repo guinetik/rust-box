@@ -4,7 +4,7 @@ mod utils;
 // a function is used to store blocks of codes to reuse
 pub fn run() -> i32 {
     utils::print_tabbed("What's your name?".italic().to_string());
-    let mut input_text = utils::read_input();
+    let input_text = utils::read_input();
     greeting("Hello", &input_text);
     //
     utils::print_tabbed(format!(
